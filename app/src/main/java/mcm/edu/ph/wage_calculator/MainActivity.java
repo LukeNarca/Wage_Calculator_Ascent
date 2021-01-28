@@ -34,19 +34,22 @@ public class MainActivity extends AppCompatActivity {
 
         Double value = 0.0;
         Double answer = 0.0;
-        if(value> workHours){
-           answer= (hourlyWage*workHours) + ((value-8)*(hourlyWage*overTimeWage));
-        }
-        else {
-            answer = (value * hourlyWage);
-        }
 
-        value = Double.parseDouble(inputvalue.getText().toString());
+
 
         switch (v.getId()) {
-            case R.id.btnCompute:
-                txtanswer.setText(Double.toString(answer));
 
+
+            case R.id.btnCompute:
+                value = Double.parseDouble(inputvalue.getText().toString());
+
+                if (value> workHours){
+                    answer= (hourlyWage*workHours) + ((value-8)*(hourlyWage*overTimeWage));
+                }
+                else {
+                    answer = (value * hourlyWage);
+                }
+                txtanswer.setText(Double.toString(answer));
         }
     }
 
