@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnCompute;
         btnCompute = findViewById(R.id.btnCompute);
-        btnCompute.setOnClickListener((View.OnClickListener) this);
 
+        btnCompute.setOnClickListener(this);
     }
 
     public void onClick(View v) {
@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                     answer = (value * hourlyWage);
                 }
                 txtanswer.setText(Double.toString(answer));
+
+                break;
         }
     }
 
