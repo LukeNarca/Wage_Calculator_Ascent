@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         int workHours = 8;
         int hourlyWage = 100;
-        int overTimeWage = 130;
+        int overTimeWage = 30;
 
         Double value = 0.0;
         Double answer = 0.0;
